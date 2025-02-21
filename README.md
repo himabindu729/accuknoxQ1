@@ -1,7 +1,6 @@
 Django Signals Execution: Synchronous or Asynchronous?
 
-Django provides a built-in signals framework that allows different parts of an application to communicate. However, an important question is whether Django signals execute synchronously or asynchronously by default.
-Answer: Django Signals are Executed Synchronously.
+Django provides a built-in signals framework that allows different parts of an application to communicate. However, an important question is whether Django signals execute synchronously or asynchronously by default. Django Signals are Executed Synchronously.
 By default, Django signals are executed synchronously. This means that when a signal is sent, Django waits for the corresponding signal handler to complete before executing the next line of code.
 
 Proof with a Code Snippet
