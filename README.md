@@ -32,22 +32,7 @@ Sending signal...
 Signal handler is running
 Signal sent!
 
-This confirms that the signal handler runs before the execution of the next line, proving that Django signals are synchronous by default.
-
-How to Make Django Signals Asynchronous?
-If you want Django signals to run asynchronously, you need to handle them inside a separate thread or a task queue like Celery:
-
-import threading
-
-def async_signal_handler(sender, **kwargs):
-    print("Signal handler is running asynchronously")
-
-def send_signal_async(request):
-    print("Sending signal...")
-    thread = threading.Thread(target=async_signal_handler, args=(None,))
-    thread.start()
-    print("Signal sent!")
-    return HttpResponse("Signal sent asynchronously")
+This confirms that the signal handler runs before the execution of the next line, proving that Django signals are synchronous by default
 
 Conclusion:
 Django signals are executed synchronously by default, meaning that Django waits for the signal handler to complete before proceeding. 
